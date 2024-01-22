@@ -1,0 +1,49 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    text-align: center;
+    background-color: #734B5E;
+}
+
+h1{
+    margin: 10px;
+    color: #F5C396;
+}
+.container{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxes{
+    width: 60vb;
+    height: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.box{
+    width: 18vb;
+    height: 18vh;
+    font-size: 50px;
+    border-radius: 15px;
+    border: none;
+    color: #83A0A0;
+}
+
+.reset-btn{
+    width: 15vb;
+    height: 8vh;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    background-color: #F5C396;
+    color: #734B5E;
+}
