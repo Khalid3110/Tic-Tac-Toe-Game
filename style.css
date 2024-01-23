@@ -37,6 +37,9 @@ h1{
     border: none;
     color: #83A0A0;
 }
+.letterColor{
+    color: aqua;
+}
 
 .reset-btn{
     width: 15vb;
@@ -46,4 +49,8 @@ h1{
     font-size: 20px;
     background-color: #F5C396;
     color: #734B5E;
+}
+
+.hide{
+    display: none;
 }
