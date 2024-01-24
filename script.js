@@ -4,7 +4,11 @@ let resetBtn = document.querySelector(".reset-btn");
 let newBtn = document.querySelector(".new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let winnerPer = document.querySelector(".winner");
+let xwinnerCount = document.querySelector(".x-winnig");
+let owinnerCount = document.querySelector(".o-winnig");
 let count = 0;
+let xwinCount = 0;
+let owinCount = 0;
 
 let turnO = true;
 
@@ -22,7 +26,7 @@ const winnerPattern = [
 boxes.forEach((box)=>{
     box.addEventListener("click", ()=>{
         if(turnO){
-            box.style.color="aqua";
+            box.style.color="#ffffff";
             box.innerText = "O";
             turnO = false;
         }
@@ -49,13 +53,17 @@ const enabledBtns = () =>{
     for(box of boxes){
         box.disabled = false;
         box.innerText = "";
+        box.style.color="";
     }
+    count = 0;
 };
 
 const newGame = () =>{
     turnO = true;
     enabledBtns();
     msgContainer.classList.add("hide");
+    container.classList.remove("hide");
+    resetBtn.classList.remove("hide");
 };
 
 const finalWinner = (winner) =>{
@@ -65,6 +73,18 @@ const finalWinner = (winner) =>{
     msgContainer.classList.remove("hide");
     disableBtns();
 };
+
+const winnerCount = (winner) =>{
+    if(winner==="X"){
+        ++xwinCount;
+        xwinnerCount.innerText = `X : ${xwinCount}`;
+    }
+
+    else{
+        ++owinCount;
+        owinnerCount.innerText = `O : ${owinCount}`;
+    }
+}
 
 const matchDraw = () =>{
     winnerPer.innerText = "Match Draw. Please start New Game";
@@ -82,6 +102,7 @@ const checkWinner = () =>{
         if(pos1Val !== "" && pos2Val !== "" && pos3Val !== ""){
             if(pos1Val === pos2Val && pos2Val === pos3Val){
                 finalWinner(pos1Val);
+                winnerCount(pos1Val);
             }
 
         }
