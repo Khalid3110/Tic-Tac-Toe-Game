@@ -42,6 +42,7 @@ body{
     font-size: 20px;
     background-color: #F5C396;
     color: #734B5E;
+    padding: 3px;
 }
 
 h1{
@@ -88,4 +89,44 @@ h1{
 
 .hide{
     display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    body{
+        width: 100%;
+        height: 100%;
+    }
+
+    .container{
+        height: 80vh;
+    }
+
+    .boxes{
+        width: 60vb;
+        height: 50vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .box{
+        width: 14vb;
+        height: 14vh;
+        font-size: 50px;
+        border-radius: 15px;
+        border: none;
+        color: black;
+        background-color: #1dd3b0;
+    }
+
+    .winnig-count{
+        width: 100%;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 70%;
+    }
 }

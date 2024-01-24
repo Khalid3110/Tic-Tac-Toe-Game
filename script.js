@@ -1,4 +1,5 @@
-let container = document.querySelector(".container")
+let container = document.querySelector(".container");
+let heading = document.querySelector(".heading")
 let boxes = document.querySelectorAll(".box");
 let resetBtn = document.querySelector(".reset-btn");
 let newBtn = document.querySelector(".new-btn");
@@ -64,12 +65,14 @@ const newGame = () =>{
     msgContainer.classList.add("hide");
     container.classList.remove("hide");
     resetBtn.classList.remove("hide");
+    heading.classList.remove("hide");
 };
 
 const finalWinner = (winner) =>{
-    winnerPer.innerText = `Congratulation the winner is : ${winner}`;
+    winnerPer.innerText = `Congratulations, the winner is : ${winner}`;
     container.classList.add("hide");
     resetBtn.classList.add("hide");
+    heading.classList.add("hide");
     msgContainer.classList.remove("hide");
     disableBtns();
 };
@@ -91,6 +94,7 @@ const matchDraw = () =>{
     container.classList.add("hide");
     resetBtn.classList.add("hide");
     msgContainer.classList.remove("hide");
+    heading.classList.add("hide");
 }
 
 const checkWinner = () =>{
